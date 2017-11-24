@@ -1,0 +1,97 @@
+:root {
+  --country1: #ef5350;
+  --country1-secondary: #e53935;
+  --country1-thirdiary: #b71c1c;
+	--country2: #42a5f5;
+	--country2-secondary: #1e88e5;
+  --country2-thirdiary: #0d47a1;
+	--country3: #66bb6a;
+	--country3-secondary: #66bb6a;
+  --country3-thirdiary: #43a047;
+	--country4: #ffeb3b;
+	--country4-secondary: #fdd835;
+  --country4-thirdiary: #f57f17;
+}
+
+
+@media (max-width: 768px) {
+	.slider-margin-top{
+		 margin-top: 37px;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+	.slider-margin-top{
+		 margin-top: 58px;
+	}
+}
+
+
+@media (min-width: 992px) {
+	.slider-margin-top{
+		 margin-top: 22px;
+	}
+}
+
+.btn-country1{
+	background-color: var(--country1);
+	border-color: var(--country1-secondary);
+}
+	.btn-country1:hover{
+		background-color: var(--country1-secondary);
+		border-color: var(--country1-thirdiary);
+	}
+	.btn-country1:active{
+		background-color: var(--country1-thirdiary);
+		border-color: var(--country1-thirdiary);
+	}
+
+.btn-country2{
+	background-color: var(--country2);
+	border-color: var(--country2-secondary);
+}
+	.btn-country2:hover{
+		background-color: var(--country2-secondary);
+		border-color: var(--country2-thirdiary);
+	}
+
+	.btn-country2:active{
+		background-color: var(--country2-thirdiary);
+		border-color: var(--country2-thirdiary);
+	}
+
+.btn-country3{
+	background-color: var(--country3);
+	border-color: var(--country3-secondary);
+}
+	.btn-country3:hover{
+		background-color: var(--country3-secondary);
+		border-color: var(--country3-thirdiary);
+	}
+	.btn-country3:active{
+		background-color: var(--country3-thirdiary);
+		border-color: var(--country3-thirdiary);
+	}
+
+.btn-country4{
+	background-color: var(--country4);
+	border-color: var(--country4-secondary);
+}
+	.btn-country4:hover{
+		background-color: var(--country4-secondary);
+		border-color: var(--country4-thirdiary);
+	}
+	.btn-country4:active{
+		background-color: var(--country4-thirdiary);
+		border-color: var(--country4-thirdiary);
+	}
+
+#header{
+	background-color: gray;
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+}
+
+.width100{
+	width: 100%;
+}
