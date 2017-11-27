@@ -1,31 +1,31 @@
-var w = 500,
-	h = 500;
+var w =	200,
+	h = 200;
 
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Country 1','Country 2'];
+var LegendOptions = ['Portugal','Inglaterra'];
 
 //Data
 var d = [
 		  [
-			{axis:"Theft",value:0.29},
-			{axis:"Burglary",value:0.06},
-			{axis:"Rape",value:0.22},
-			{axis:"Homicide",value:0.14},
-			{axis:"GDP",value:0.55},
-			{axis:"Unemployment",value:0.34},
-			{axis:"Education Index",value:0.57},
-			{axis:"Migration",value:0.12},
+			{axis:"Theft",value:0.75},
+			{axis:"Burglary",value:0.437},
+			{axis:"Rape",value:0.542},
+			{axis:"Homicide",value:0.419},
+			{axis:"GDP",value:0.458},
+			{axis:"Unemployment",value:0.634},
+			{axis:"Education Index",value:0.465},
+			{axis:"Migration",value:0.404},
 		  ],[
-			{axis:"Theft",value:0.39},
-			{axis:"Burglary",value:0.31},
-			{axis:"Rape",value:0.27},
-			{axis:"Homicide",value:0.28},
-			{axis:"GDP",value:0.46},
-			{axis:"Unemployment",value:0.38},
-			{axis:"Education Index",value:0.20},
-			{axis:"Migration",value:0.41},
+			{axis:"Theft",value:0.929},
+			{axis:"Burglary",value:0.829},
+			{axis:"Rape",value:0.584},
+			{axis:"Homicide",value:0.544},
+			{axis:"GDP",value:0.527},
+			{axis:"Unemployment",value:0.278},
+			{axis:"Education Index",value:0.676},
+			{axis:"Migration",value:1.0},
 		  ]
 		];
 
@@ -74,7 +74,7 @@ var legend = svg.append("g")
 	  .data(LegendOptions)
 	  .enter()
 	  .append("rect")
-	  .attr("x", w - 65)
+	  .attr("x", w - 25)
 	  .attr("y", function(d, i){ return i * 20;})
 	  .attr("width", 10)
 	  .attr("height", 10)
@@ -85,7 +85,7 @@ var legend = svg.append("g")
 	  .data(LegendOptions)
 	  .enter()
 	  .append("text")
-	  .attr("x", w - 52)
+	  .attr("x", w - 12)
 	  .attr("y", function(d, i){ return i * 20 + 9;})
 	  .attr("font-size", "11px")
 	  .attr("fill", "#737373")

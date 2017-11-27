@@ -700,7 +700,8 @@ function path_highlight(d, i) {
 		ctx.highlight.strokeStyle = d3.functor(__.color)(d, i); 
 	}
 	
-	return color_path(d, ctx.highlight);
+	if(d!=null)
+		return color_path(d, ctx.highlight);
 };
 pc.clear = function(layer) {
   ctx[layer].clearRect(0, 0, w() + 2, h() + 2);

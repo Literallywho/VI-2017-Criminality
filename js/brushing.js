@@ -26,7 +26,7 @@ d3.csv('data/cars.csv', function(data) {
     .reorderable()
     .brushMode("1D-axes");  // enable brushing
 	
-  change_color("weight (lb)");
+  change_color("GDP");
 
   // click label to activate coloring
   parcoords.svg.selectAll(".dimension")
@@ -104,7 +104,24 @@ d3.select('#sltPredicate').on('change', function() {
   parcoords.brushPredicate(this.value);
 });
 
-parcoords.highlightedColors(['green', 'red', 'orange', 'purple']);
+parcoords.highlightedColors(['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']);
+
+var highlightedCountries = [null, null, null, null];
+
+function ChangeHighlighted(country, position){
+	if(country == '-'){
+		highlightedCountries[position-1] = null;
+		parcoords.unhighlight([]);
+		if(highlightedCountries[0] === null && highlightedCountries[1] === null && highlightedCountries[2] === null && highlightedCountries[3] === null){
+			
+		} else {
+			parcoords.highlight(highlightedCountries);
+		}
+	} else {
+		highlightedCountries[position-1] = parcoords.data().find(function(d){return d.name == country});
+		parcoords.highlight(highlightedCountries);
+	}
+}
 /*parcoords.highlight([{
   "name": "AMC Ambassador DPL",
   "economy (mpg)": "15",
