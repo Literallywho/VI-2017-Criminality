@@ -4,28 +4,28 @@ var w = 500,
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Smartphone','Tablet'];
+var LegendOptions = ['Country 1','Country 2'];
 
 //Data
 var d = [
 		  [
-			{axis:"Email",value:0.59},
-			{axis:"Social Networks",value:0.56},
-			{axis:"Internet Banking",value:0.42},
-			{axis:"News Sportsites",value:0.34},
-			{axis:"Search Engine",value:0.48},
-			{axis:"View Shopping sites",value:0.14},
-			{axis:"Paying Online",value:0.11},
-			{axis:"Buy Online",value:0.05},
+			{axis:"Theft",value:0.29},
+			{axis:"Burglary",value:0.06},
+			{axis:"Rape",value:0.22},
+			{axis:"Homicide",value:0.14},
+			{axis:"GDP",value:0.55},
+			{axis:"Unemployment",value:0.34},
+			{axis:"Education Index",value:0.57},
+			{axis:"Migration",value:0.12},
 		  ],[
-			{axis:"Email",value:0.48},
-			{axis:"Social Networks",value:0.41},
-			{axis:"Internet Banking",value:0.27},
-			{axis:"News Sportsites",value:0.28},
-			{axis:"Search Engine",value:0.46},
-			{axis:"View Shopping sites",value:0.29},
-			{axis:"Paying Online",value:0.11},
-			{axis:"Buy Online",value:0.14},
+			{axis:"Theft",value:0.39},
+			{axis:"Burglary",value:0.31},
+			{axis:"Rape",value:0.27},
+			{axis:"Homicide",value:0.28},
+			{axis:"GDP",value:0.46},
+			{axis:"Unemployment",value:0.38},
+			{axis:"Education Index",value:0.20},
+			{axis:"Migration",value:0.41},
 		  ]
 		];
 
