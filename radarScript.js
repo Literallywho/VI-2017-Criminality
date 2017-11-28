@@ -4,7 +4,7 @@ var w =	200,
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Portugal','Inglaterra'];
+var LegendOptions = ['Portugal','England'];
 
 //Data
 var d = [
