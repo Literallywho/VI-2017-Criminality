@@ -30,41 +30,80 @@
 			margin-left: 15%;
 			display: inline;
 		}​
+		
+		body * {
+		   font-size: 1em !important;
+		   color: #000 !important;
+		   font-family: Arial !important;
+		}
+		
+		.box {
+			width:30px;
+			height:30px;
+		}
 	</style>
 </head>
 <body>
 	<div id="header" class="col-xs-12">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<div class="dropdown">
-					<button id="pais1" class="width100 btn btn-country1 dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu country-list">
-					</ul>
+				<div class="row">
+				  <div class="col-xs-2">
+					<div class="box btn-country1"> </div>
+				  </div>
+				  <div class="col-xs-10">
+					<div class="dropdown">
+						<button id="pais1" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu country-list">
+						</ul>
+					</div>
+				  </div>
+				</div>					
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<div class="row">
+				  <div class="col-xs-2">
+					<div class="box btn-country2"> </div>
+				  </div>
+				  <div class="col-xs-10">
+					<div class="dropdown">
+						<button id="pais2" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu country-list">
+						</ul>
+					</div>
+				  </div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<div class="dropdown">
-					<button id="pais2" class="width100 btn btn-country2 dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu country-list">
-					</ul>
+				<div class="row">
+				  <div class="col-xs-2">
+					<div class="box btn-country3"> </div>
+				  </div>
+				  <div class="col-xs-10">
+					<div class="dropdown">
+						<button id="pais3" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu country-list">
+						</ul>
+					</div>
+				  </div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<div class="dropdown">
-					<button id="pais3" class="width100 btn btn-country3 dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu country-list">
-					</ul>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<div class="dropdown">
-					<button id="pais4" class="width100 btn btn-country4 dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu country-list">
-					</ul>
+				<div class="row">
+				  <div class="col-xs-2">
+					<div class="box btn-country4"> </div>
+				  </div>
+				  <div class="col-xs-10">
+					<div class="dropdown">
+						<button id="pais4" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu country-list">
+						</ul>
+					</div>
+				  </div>
 				</div>
 			</div>
 		</div>
@@ -91,7 +130,6 @@
 		</div>
 	</div>
 </body>
-
 
 	<script src="radarChart.js"></script>
 	<script type="text/javascript" src="radarScript.js"></script>

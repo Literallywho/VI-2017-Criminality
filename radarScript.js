@@ -45,7 +45,7 @@ RadarChart.draw("#chart", d, mycfg);
 ////////////////////////////////////////////
 /////////// Initiate legend ////////////////
 ////////////////////////////////////////////
-
+/*
 var svg = d3.select('#body')
 	.selectAll('svg')
 	.append('svg')
@@ -53,14 +53,14 @@ var svg = d3.select('#body')
 	.attr("height", h)
 
 //Create the title for the legend
-/*var text = svg.append("text")
+var text = svg.append("text")
 	.attr("class", "title")
 	.attr('transform', 'translate(90,0)') 
 	.attr("x", w - 70)
 	.attr("y", 10)
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
-	.text("What % of owners use a specific service in a week"); */
+	.text("What % of owners use a specific service in a week"); 
 		
 //Initiate Legend	
 var legend = svg.append("g")
@@ -91,3 +91,4 @@ var legend = svg.append("g")
 	  .attr("fill", "#737373")
 	  .text(function(d) { return d; })
 	  ;	
+*/
