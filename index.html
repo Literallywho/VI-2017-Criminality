@@ -1,9 +1,18 @@
 <head>
+	<meta charset="utf-8">
 	<script src="jquery/jquery.min.js"></script>
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<script src="bootstrap/bootstrap-slider.min.js"></script>
 	
 	<script src="D3/d3.v3.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="D3-Geomap/css/d3.geomap.css">
+	
+	<script src="D3-Geomap/vendor/d3.geomap.dependencies.min.js"></script>
+	<script src="D3-Geomap/js/d3.geomap.min.js"></script>
+	
+	
+	
 	
 	<link rel="stylesheet" type="text/css" href="Parcoords/d3.parcoords.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -152,6 +161,8 @@
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 			<h2 style="float: left">Map</h2>
+		<div id="map">
+		</div>
 		</div>
 	</div>
 	
@@ -173,9 +184,10 @@
 		</div>
 	</div>
 </body>
-
+		
 	<script src="radarChart.js"></script>
 	<script type="text/javascript" src="radarScript.js"></script>
+	<script src="GeomapScript.js"></script>
 	
 <script src="js/brushing.js"></script>
 
