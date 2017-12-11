@@ -4,36 +4,56 @@ var w =	200,
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Portugal','England'];
 
 //Data
 var d = [
-		  [
-			{axis:"Theft",value:0.75},
-			{axis:"Burglary",value:0.437},
-			{axis:"Rape",value:0.542},
-			{axis:"Homicide",value:0.419},
-			{axis:"GDP",value:0.458},
-			{axis:"Unemployment",value:0.634},
-			{axis:"Education",value:0.465},
-			{axis:"Migration",value:0.404},
-		  ],[
-			{axis:"Theft",value:0.929},
-			{axis:"Burglary",value:0.829},
-			{axis:"Rape",value:0.584},
-			{axis:"Homicide",value:0.544},
-			{axis:"GDP",value:0.527},
-			{axis:"Unemployment",value:0.278},
-			{axis:"Education",value:0.676},
-			{axis:"Migration",value:1.0},
-		  ]
-		];
+					[
+					{axis:"Theft",value:0.0},
+					{axis:"Burglary",value:0.0},
+					{axis:"Rape",value:0.0},
+					{axis:"Homicide",value:0.0},
+					{axis:"GDP",value:0.0},
+					{axis:"Unemployment",value:0.0},
+					{axis:"Education",value:0.0},
+					{axis:"Migration",value:0.0}
+					],
+					[
+					{axis:"Theft",value:0.0},
+					{axis:"Burglary",value:0.0},
+					{axis:"Rape",value:0.0},
+					{axis:"Homicide",value:0.0},
+					{axis:"GDP",value:0.0},
+					{axis:"Unemployment",value:0.0},
+					{axis:"Education",value:0.0},
+					{axis:"Migration",value:0.0}
+					],
+					[
+					{axis:"Theft",value:0.0},
+					{axis:"Burglary",value:0.0},
+					{axis:"Rape",value:0.0},
+					{axis:"Homicide",value:0.0},
+					{axis:"GDP",value:0.0},
+					{axis:"Unemployment",value:0.0},
+					{axis:"Education",value:0.0},
+					{axis:"Migration",value:0.0}
+					],
+					[
+					{axis:"Theft",value:0.0},
+					{axis:"Burglary",value:0.0},
+					{axis:"Rape",value:0.0},
+					{axis:"Homicide",value:0.0},
+					{axis:"GDP",value:0.0},
+					{axis:"Unemployment",value:0.0},
+					{axis:"Education",value:0.0},
+					{axis:"Migration",value:0.0}
+					]
+				];
 
 //Options for the Radar chart, other than default
 var mycfg = {
   w: w,
   h: h,
-  maxValue: 0.6,
+  maxValue: 1.0,
   levels: 6,
   ExtraWidthX: 160
 }
