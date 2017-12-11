@@ -15,7 +15,7 @@ var d = [
 			{axis:"Homicide",value:0.419},
 			{axis:"GDP",value:0.458},
 			{axis:"Unemployment",value:0.634},
-			{axis:"Education Index",value:0.465},
+			{axis:"Education",value:0.465},
 			{axis:"Migration",value:0.404},
 		  ],[
 			{axis:"Theft",value:0.929},
@@ -24,7 +24,7 @@ var d = [
 			{axis:"Homicide",value:0.544},
 			{axis:"GDP",value:0.527},
 			{axis:"Unemployment",value:0.278},
-			{axis:"Education Index",value:0.676},
+			{axis:"Education",value:0.676},
 			{axis:"Migration",value:1.0},
 		  ]
 		];
@@ -41,6 +41,46 @@ var mycfg = {
 //Call function to draw the Radar chart
 //Will expect that data is in %'s
 RadarChart.draw("#chart", d, mycfg);
+
+
+
+function ChangeRadarValues(country, position){
+		if(country == '-'){
+			d[position-1] = [
+				{axis:"Theft",value:0.0},
+				{axis:"Burglary",value:0.0},
+				{axis:"Rape",value:0.0},
+				{axis:"Homicide",value:0.0},
+				{axis:"GDP",value:0.0},
+				{axis:"Unemployment",value:0.0},
+				{axis:"Education",value:0.0},
+				{axis:"Migration",value:0.0},
+		  ];
+			RadarChart.draw('#chart', d, mycfg);
+	} else {
+		info = parcoords.data().find(function(d){return d.name == country})
+		d[position-1] = ConvertToRadar([info])[0];
+		RadarChart.draw('#chart', d, mycfg);
+	}
+}
+
+function ConvertToRadar(infoArray){
+	var convertedArray = [];
+	var i = 0;
+	for(var i = 0;i<infoArray.length;i++){
+		var converted = [];
+		converted.push({axis:"Theft", value: infoArray[i]['Theft']});
+		converted.push({axis:"Burglary", value: infoArray[i]['Burglary']});
+		converted.push({axis:"Rape", value: infoArray[i]['Rape']});
+		converted.push({axis:"Homicide", value: infoArray[i]['Homicide']});
+		converted.push({axis:"GDP", value: infoArray[i]['GDP']});
+		converted.push({axis:"Unemployment", value: infoArray[i]['Unemployment']});
+		converted.push({axis:"Education", value: infoArray[i]['Education']});
+		converted.push({axis:"Migration", value: infoArray[i]['Migration']});
+		convertedArray.push(converted);
+	}
+	return convertedArray;
+}
 
 ////////////////////////////////////////////
 /////////// Initiate legend ////////////////

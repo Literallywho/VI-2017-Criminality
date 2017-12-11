@@ -6,10 +6,10 @@
 	
 	<script src="D3/d3.v3.min.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="D3-Geomap/css/d3.geomap.css">
+	<link rel="stylesheet" type="text/css" href="d3-geomap/css/d3.geomap.css">
 	
-	<script src="D3-Geomap/vendor/d3.geomap.dependencies.min.js"></script>
-	<script src="D3-Geomap/js/d3.geomap.min.js"></script>
+	<script src="d3-geomap/vendor/d3.geomap.dependencies.min.js"></script>
+	<script src="d3-geomap/js/d3.geomap.min.js"></script>
 	
 	
 	
@@ -206,6 +206,7 @@ $(document).ready(function(){
 
 	function updateCountry(countryName, countryID){
 		ChangeHighlighted(countryName, countryID);
+		ChangeRadarValues(countryName, countryID);
 	}
 
 	var ul = $('.country-list');
