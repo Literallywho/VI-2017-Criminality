@@ -105,6 +105,7 @@ var RadarChart = {
 		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total + 0.39))-60*Math.sin(i*cfg.radians/total + 0.39);})
 		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total + 0.39))-20*Math.cos(i*cfg.radians/total + 0.39);});
 
+
  
 	d.forEach(function(y, x){
 	  dataValues = [];

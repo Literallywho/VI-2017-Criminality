@@ -45,7 +45,7 @@ var d = [
 					{axis:"GDP",value:0.0},
 					{axis:"Unemployment",value:0.0},
 					{axis:"Education",value:0.0},
-					{axis:"Migration",value:0.0}
+					{axis:"Migration",value:0.0},
 					]
 				];
 
