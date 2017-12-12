@@ -117,58 +117,63 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 slider-margin-top">
-			<input style="width: 100%;" id="ex13" type="text"/>
+			<div class="slider-margin-sides">
+				<input style="width: 100%;" id="ex13" type="text"/>
+			</div>
 		</div>
 	</div>
 	
-	<div class="col-xs-12" style="display: flex; align-items: center; margin-top: 20px;">
-		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+	<div class="col-xs-12" style="align-items: center; margin-top: 20px;">
+		<div class="col-xs-12 col-sm-8 col-md-4 col-lg-4">
+		<!-- ################## LINE CHART ################# -->
 			<div id="lineChart"></div>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<div class="col-xs-12">
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<h4>Indicators</h4>
-					<div class="radio">
-					  <label><input type="radio" name="indicator">Education Index</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="indicator">GDP</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="indicator">Migration</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="indicator">Unemployment</label>
-					</div>
+		<div class="col-xs-offset-3 col-xs-6 col-sm-offset-0 col-sm-4 col-md-3 col-lg-3">
+		<!-- ################## RADIO ################# -->
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<h4>Indicators</h4>
+				<div class="radio">
+				  <label><input type="radio" name="indicator">Education Index</label>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<h4>Crimes</h4>
-					<div class="radio">
-					  <label><input type="radio" name="crime">Burglary</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="crime">Homicide</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="crime">Rape</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="crime">Theft</label>
-					</div>
+				<div class="radio">
+				  <label><input type="radio" name="indicator">GDP</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="indicator">Migration</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="indicator">Unemployment</label>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<h4>Crimes</h4>
+				<div class="radio">
+				  <label><input type="radio" name="crime">Burglary</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="crime">Homicide</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="crime">Rape</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="crime">Theft</label>
 				</div>
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+		<!-- ################## MAP ################# -->
 			<div id="map"></div>
 		</div>
 	</div>
 	
 	<div class="col-xs-12" style="display: flex; align-items: center; margin-top: 20px;">
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<!-- ################## Parallel Coords ################# -->
 			<div id="example" class="parcoords" style="width:100%;height:200px;"></div>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		<!-- ################## Radar Chart ################# -->
 			<div id="radar-background">	
 				<div id="body">
 					<div id="chart">

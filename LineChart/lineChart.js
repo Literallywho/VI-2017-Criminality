@@ -1,8 +1,12 @@
+  linechart = d3.select("#lineChart");
+
+	
+  //height = linechart[0][0].clientHeight - margin.top - margin.bottom;
 
 // Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 70, left: 50},
-    width = 500 - margin.left - margin.right,
-    height = 250 - margin.top - margin.bottom;
+var margin = {top: 30, right: 20, bottom: 70, left: 50} //width = 500 
+    var height = 200
+		var width = linechart[0][0].clientWidth - margin.left - margin.right;
 
 	
 // Parse the date / time
