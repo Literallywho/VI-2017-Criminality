@@ -4,7 +4,7 @@
   //height = linechart[0][0].clientHeight - margin.top - margin.bottom;
 
 // Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 70, left: 50} //width = 500 
+var margin = {top: 30, right: 20, bottom: 30, left: 50} //width = 500 
     var height = 200
 		var width = linechart[0][0].clientWidth - margin.left - margin.right;
 
@@ -37,11 +37,10 @@ var svg = d3.select("#lineChart")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
 
-// Get the data
-d3.csv("data/lineChart.csv", function(error, data) {
-    data.forEach(function(d) {
-		d.date = parseDate(d.date);
-		d.price = +d.price;
+function drawLinechart(data){
+		data.forEach(function(d) {
+			d.date = parseDate(d.date);
+			d.price = +d.price;
     });
 
     // Scale the range of the data
@@ -55,7 +54,7 @@ d3.csv("data/lineChart.csv", function(error, data) {
 
     var color = d3.scale.category10();   // set the colour scale
 
-    legendSpace = width/dataNest.length; // spacing for the legend
+    //legendSpace = width/dataNest.length; // spacing for the legend
 
     // Loop through each symbol / key
     dataNest.forEach(function(d,i) { 
@@ -68,7 +67,7 @@ d3.csv("data/lineChart.csv", function(error, data) {
             .attr("d", priceline(d.values));
 
         // Add the Legend
-        svg.append("text")
+        /*svg.append("text")
             .attr("x", (legendSpace/2)+i*legendSpace)  // space legend
             .attr("y", height + (margin.bottom/2)+ 5)
             .attr("class", "legend")    // style the legend
@@ -85,7 +84,7 @@ d3.csv("data/lineChart.csv", function(error, data) {
                 // Update whether or not the elements are active
                 d.active = active;
                 })  
-            .text(d.key); 
+            .text(d.key); */
 
     });
 
@@ -99,5 +98,9 @@ d3.csv("data/lineChart.csv", function(error, data) {
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis);
+}
 
+// Get the data
+d3.csv("data/lineChart.csv", function(error, data) {
+		drawLinechart(data);
 });
