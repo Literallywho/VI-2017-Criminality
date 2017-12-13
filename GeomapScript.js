@@ -1,9 +1,9 @@
 var map = d3.geomap.choropleth()
     .geofile('d3-geomap/topojson/world/countries.json')
-    .colors(['green','red'])
-    .column('1800')
-    .domain([0, 1])
-    .legend(false)
+	.colors(['#f4d3b2','#dfba94','#caa076','#b48658','#9f6d3a','#8a531c'])
+    .column('2015')
+    .domain([0, 5000])
+    .legend(true)
     .unitId('Country');
 
 d3.csv('data/Countries.csv', function(error, data) {

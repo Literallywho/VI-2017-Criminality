@@ -1,6 +1,7 @@
 <head>
 	<meta charset="utf-8">
 	<script src="jquery/jquery.min.js"></script>
+	<script src="country-codes/country-codes.js"></script>
 	<script src="bootstrap/bootstrap.min.js"></script>
 	<script src="bootstrap/bootstrap-slider.min.js"></script>
 	
@@ -9,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="d3-geomap/css/d3.geomap.css">
 	
 	<script src="d3-geomap/vendor/d3.geomap.dependencies.min.js"></script>
-	<script src="d3-geomap/js/d3.geomap.min.js"></script>
+	<script src="d3-geomap/js/d3.geomap.js"></script>
 	
 	
 	<link rel="stylesheet" type="text/css" href="Parcoords/d3.parcoords.css">
@@ -207,7 +208,9 @@ var countries = `
 			`
 
 $(document).ready(function(){
-
+	
+	initializeCodes();
+	
 	function updateCountry(countryName, countryID){
 		ChangeHighlighted(countryName, countryID);
 		ChangeRadarValues(countryName, countryID);
