@@ -1,0 +1,58 @@
+:root {
+  --crime: #965c4e;
+	--indicator: #807689;
+}
+
+.btn.outline.btn-indicator-selector {
+	margin-top: 10px;
+	background: none;
+	padding: 2px 18px;
+	width: 141px;
+	border: 2px solid var(--indicator);
+  color: var(--indicator);
+}
+
+	.btn.outline.btn-indicator-selector:hover {
+		background: var(--indicator);
+		color: white;
+	}
+	.btn.outline.btn-indicator-selector:active {
+		background: var(--indicator) !important;
+		color: white !important;
+	}
+		.btn.outline.btn-indicator-selector:hover:focus{
+			background: none;
+			color: var(--indicator);
+		}
+
+.btn.outline.btn-indicator-selector.selected{
+  background: var(--indicator) !important;
+  color: white !important;
+}
+
+.btn.outline.btn-crime-selector {
+	margin-top: 10px;
+	background: none;
+	padding: 2px 18px;
+	width: 141px;
+	border: 2px solid var(--crime);
+  color: var(--crime);
+}
+
+	.btn.outline.btn-crime-selector:hover {
+		background: var(--crime);
+		color: white;
+	}
+	.btn.outline.btn-crime-selector:active {
+		background: var(--crime) !important;
+		color: white !important;
+	}
+		.btn.outline.btn-crime-selector:hover:focus{
+			background: none;
+			color: var(--crime);
+		}
+
+.btn.outline.btn-crime-selector.selected{
+  background: var(--crime) !important;
+  color: white !important;
+}
