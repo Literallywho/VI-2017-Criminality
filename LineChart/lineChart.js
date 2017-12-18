@@ -13,20 +13,21 @@ var margin = {top: 30, right: 20, bottom: 30, left: 50} //width = 500
 var parseDate = d3.time.format("%b %Y").parse;
 
 // Set the ranges
-var x = d3.time.scale().range([0, width]);
+var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
+var noFormat = d3.format("04d");
 // Define the axes
 var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5);
+    .orient("bottom").ticks(10).tickFormat(function(a) {return noFormat(a)});
 
 var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
 
 // Define the line
 var priceline = d3.svg.line()	
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.price); });
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Value); });
     
 // Adds the svg canvas
 var svg = d3.select("#lineChart")
@@ -36,20 +37,25 @@ var svg = d3.select("#lineChart")
     .append("g")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
-
+function deleteLineChart(){
+	svg.selectAll('path').remove();
+	svg.selectAll('g').remove();
+}
 function drawLinechart(data){
 		data.forEach(function(d) {
-			d.date = parseDate(d.date);
-			d.price = +d.price;
+			d.Year = d.Year;
+			d.Value = +d.Value;
     });
+		
+		xdomain = d3.extent(data, function(d) { return d.Year; });
 
     // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.price; })]);
+    x.domain(xdomain);
+    y.domain([0, d3.max(data, function(d) { return d.Value; })]);
 
     // Nest the entries by symbol
     var dataNest = d3.nest()
-        .key(function(d) {return d.symbol;})
+        .key(function(d) {return d.Country;})
         .entries(data);
 
     var color = d3.scale.category10();   // set the colour scale
@@ -101,6 +107,23 @@ function drawLinechart(data){
 }
 
 // Get the data
-d3.csv("data/lineChart.csv", function(error, data) {
-		drawLinechart(data);
-});
+function LoadLineChart(chartName, selectedCountries){
+	d3.csv("data/lineChart_data/"+chartName+".csv", function(error, data) {
+		deleteLineChart();
+		var lcData = [];
+		var abc = ['A', 'B', 'C', 'D'];
+		for (var j = 0; j < selectedCountries.length; j++)
+		{
+			var newdata = data.reduce(function(a, e, i) {
+				if (e.Country == selectedCountries[j])
+						a.push(e);
+				return a;
+			}, []);
+			if(newdata.length == 0){
+				newdata = [{Country: abc[j], Year: "2003", Value: "0.0"}]
+			}
+			lcData = lcData.concat(newdata);
+		}
+		drawLinechart(lcData);
+	});
+}

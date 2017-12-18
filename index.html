@@ -188,6 +188,8 @@
 
 var selectedYear = 2003;
 var slideStarted = false;
+var selectedCountries = ['-', '-', '-', '-']
+var currentIndicator = "";
 
 var countries = `
 			<li><a href="#">-</a></li>
@@ -197,14 +199,15 @@ var countries = `
 			<li><a href="#">Spain</a></li>
 			<li><a href="#">England</a></li>
 			`
-
 $(document).ready(function(){
 	
 	initializeCodes();
 	
 	function updateCountry(countryName, countryID){
+		selectedCountries[countryID-1] = countryName;
 		ChangeHighlighted(countryName, countryID);
 		ChangeRadarValues(countryName, countryID);
+		LoadLineChart('Unemployment_Age15+', selectedCountries)
 	}
 
 	var ul = $('.country-list');
@@ -240,6 +243,8 @@ $(document).ready(function(){
 		$(classToDeselect).removeClass(classToAdd);
 		if(!removeOnly){
 			selfButton.addClass(classToAdd);
+			currentIndicator = 'Unemployment_Age15+';
+			LoadLineChart('Unemployment_Age15+', selectedCountries)
 		}
 	}
 	
