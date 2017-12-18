@@ -1,4 +1,75 @@
 var RadarChart = {
+	update: function(id, d, options){
+	
+	var series=0;
+	var g = d3.select(id)	
+		var cfg = {
+		 radius: 5,
+		 w: 600,
+		 h: 600,
+		 factor: 1,
+		 factorLegend: .85,
+		 levels: 3,
+		 maxValue: 0,
+		 radians: 2 * Math.PI,
+		 opacityArea: 0.5,
+		 ToRight: 5,
+		 TranslateX: 80,
+		 TranslateY: 30,
+		 ExtraWidthX: 100,
+		 ExtraWidthY: 100,
+		 color: d3.scale.category10().domain(d3.range(0,10))
+		};
+	
+		if('undefined' !== typeof options){
+			for(var i in options){
+			if('undefined' !== typeof options[i]){
+				cfg[i] = options[i];
+			}
+			}
+		}
+		
+		var allAxis = (d[0].map(function(i, j){return i.axis}));
+		var total = allAxis.length;
+		d.forEach(function(y, x){
+			dataValues = [];
+			pos=[];
+			g.selectAll(".nodes")
+			.data(y, function(j, i){
+				dataValues.push([
+				cfg.w/2*(1-(parseFloat(Math.max(j.value, 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total + 0.39)), 
+				cfg.h/2*(1-(parseFloat(Math.max(j.value, 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total + 0.39))
+				]);
+				pos.push(j);
+			});
+			dataValues.push(dataValues[0]);
+			
+			var str="";
+			var drewCircles = true; 
+			for(var i = 0; i<dataValues.length; i++){
+				str=str+dataValues[i][0]+","+dataValues[i][1]+" ";
+				if(i > 7 || g.selectAll('svg').selectAll('circle.radar-chart-serie'+series+'.circle'+i)[0].length>0){
+					g.selectAll('svg').selectAll('circle.radar-chart-serie'+series+'.circle'+i).transition(""+series+""+i).duration(1000).attr('cx', function(){return dataValues[i][0];}).attr('cy', function(){return dataValues[i][1]});
+				} else {
+					drewCircles = false;
+				}
+			}
+			dur = 1000;
+			if(!drewCircles){
+				g.selectAll('svg').selectAll('circle.radar-chart-serie'+series).remove()
+				CreateCircle(0, pos, series, g.selectAll('svg>g'), cfg, total);
+				dur = 0;
+			}
+			
+			g.selectAll('svg').selectAll(".radar-chart-serie"+series).transition(series).duration(dur)
+						.attr("points", str);
+			series++;
+		});
+			series=0;
+
+
+			
+	},
   draw: function(id, d, options){
   var cfg = {
 	 radius: 5,
@@ -32,7 +103,7 @@ var RadarChart = {
 	var Format = d3.format('%');
 	d3.select(id).select("svg").remove();
 	
-	var g = d3.select(id)
+		var g = d3.select(id)
 			.append("svg")
 			.attr("width", cfg.w+cfg.ExtraWidthX)
 			.attr("height", cfg.h+cfg.ExtraWidthY)
@@ -153,16 +224,29 @@ var RadarChart = {
 
 
 	d.forEach(function(y, x){
+		CreateCircle(x, y, series, g, cfg, total);
+	  series++;
+	});
+	//Tooltip
+	tooltip = g.append('text')
+			   .style('opacity', 0)
+			   .style('font-family', 'sans-serif')
+			   .style('font-size', '13px');
+  }
+};
+
+function CreateCircle(x, y, series, g, cfg, total){
 		if(y[0]['value'] == y[1]['value'] && y[0]['value'] == y[2]['value'] && y[0]['value'] == y[3]['value'] && y[0]['value'] == y[4]['value'] &&y[0]['value'] == y[5]['value'] &&y[0]['value'] == y[6]['value'] &&y[0]['value'] == y[7]['value'] && y[0]['value'] == 0)
 		{
-		
+			
 		}
 		else
 		{
+			circleNum = -1;
 			g.selectAll(".nodes")
 			.data(y).enter()
 			.append("svg:circle")
-			.attr("class", "radar-chart-serie"+series)
+			.attr("class", function(){circleNum = circleNum+1; return "radar-chart-serie"+series+" circle"+circleNum})
 			.attr('r', cfg.radius)
 			.attr("alt", function(j){return Math.max(j.value, 0)})
 			.attr("cx", function(j, i){
@@ -207,12 +291,4 @@ var RadarChart = {
 			.append("svg:title")
 			.text(function(j){return Math.max(j.value, 0)});
 		}
-	  series++;
-	});
-	//Tooltip
-	tooltip = g.append('text')
-			   .style('opacity', 0)
-			   .style('font-family', 'sans-serif')
-			   .style('font-size', '13px');
-  }
-};
+}

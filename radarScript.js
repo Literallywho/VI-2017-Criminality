@@ -81,7 +81,7 @@ function ChangeRadarValues(country, position){
 	} else {
 		info = parcoords.data().find(function(d){return d.name == country})
 		d[position-1] = ConvertToRadar([info])[0];
-		RadarChart.draw('#chart', d, mycfg);
+		RadarChart.update('#chart', d, mycfg);
 	}
 }
 
