@@ -168,7 +168,7 @@
 <script>
 
 
-var selectedYear = 2003;
+var selectedYear = 2012;
 var slideStarted = false;
 var selectedCountries = ['', '', '', ''];
 var crimeName = "";
@@ -197,6 +197,9 @@ $(document).ready(function(){
     ticks_labels: [2003,'','','','','','','','','','',2014],
     ticks_snap_bounds: 1
 	});
+	
+	
+	$("#ex13").slider('setValue', 2012)
 	
 	$('#ex13').on('slideStop', function (e) {
 				var changed = (e.value != selectedYear);
