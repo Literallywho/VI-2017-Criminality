@@ -233,19 +233,19 @@ Belarus,2012,003.58
 Belarus,2013,003.51
 Belarus,2014,003.58
 Belarus,2015,
-Belgium***,2003,002.21
-Belgium***,2004,002.55
-Belgium***,2005,002.09
-Belgium***,2006,002.08
-Belgium***,2007,001.97
-Belgium***,2008,001.88
-Belgium***,2009,001.74
-Belgium***,2010,001.73
-Belgium***,2011,001.94
-Belgium***,2012,001.85
-Belgium***,2013,001.84
-Belgium***,2014,001.85
-Belgium***,2015,001.95
+Belgium,2003,002.21
+Belgium,2004,002.55
+Belgium,2005,002.09
+Belgium,2006,002.08
+Belgium,2007,001.97
+Belgium,2008,001.88
+Belgium,2009,001.74
+Belgium,2010,001.73
+Belgium,2011,001.94
+Belgium,2012,001.85
+Belgium,2013,001.84
+Belgium,2014,001.85
+Belgium,2015,001.95
 Belize,2003,024.89
 Belize,2004,028.61
 Belize,2005,028.59
@@ -1312,19 +1312,19 @@ Jordan,2012,002.30
 Jordan,2013,002.00
 Jordan,2014,
 Jordan,2015,
-Kazakhstan*,2003,013.15
-Kazakhstan*,2004,013.67
-Kazakhstan*,2005,011.68
-Kazakhstan*,2006,011.08
-Kazakhstan*,2007,010.51
-Kazakhstan*,2008,011.35
-Kazakhstan*,2009,011.00
-Kazakhstan*,2010,008.56
-Kazakhstan*,2011,008.58
-Kazakhstan*,2012,007.53
-Kazakhstan*,2013,006.55
-Kazakhstan*,2014,005.20
-Kazakhstan*,2015,004.84
+Kazakhstan,2003,013.15
+Kazakhstan,2004,013.67
+Kazakhstan,2005,011.68
+Kazakhstan,2006,011.08
+Kazakhstan,2007,010.51
+Kazakhstan,2008,011.35
+Kazakhstan,2009,011.00
+Kazakhstan,2010,008.56
+Kazakhstan,2011,008.58
+Kazakhstan,2012,007.53
+Kazakhstan,2013,006.55
+Kazakhstan,2014,005.20
+Kazakhstan,2015,004.84
 Kenya,2003,
 Kenya,2004,004.05
 Kenya,2005,003.56
@@ -1832,19 +1832,19 @@ New Caledonia,2012,
 New Caledonia,2013,
 New Caledonia,2014,
 New Caledonia,2015,
-New Zealand****,2003,001.09
-New Zealand****,2004,001.10
-New Zealand****,2005,001.48
-New Zealand****,2006,001.17
-New Zealand****,2007,001.13
-New Zealand****,2008,001.19
-New Zealand****,2009,001.55
-New Zealand****,2010,000.98
-New Zealand****,2011,000.89
-New Zealand****,2012,000.92
-New Zealand****,2013,001.03
-New Zealand****,2014,000.91
-New Zealand****,2015,
+New Zealand,2003,001.09
+New Zealand,2004,001.10
+New Zealand,2005,001.48
+New Zealand,2006,001.17
+New Zealand,2007,001.13
+New Zealand,2008,001.19
+New Zealand,2009,001.55
+New Zealand,2010,000.98
+New Zealand,2011,000.89
+New Zealand,2012,000.92
+New Zealand,2013,001.03
+New Zealand,2014,000.91
+New Zealand,2015,
 Nicaragua,2003,012.12
 Nicaragua,2004,012.17
 Nicaragua,2005,013.55
@@ -2001,19 +2001,19 @@ Peru,2012,006.49
 Peru,2013,006.59
 Peru,2014,006.70
 Peru,2015,007.16
-Philippines*,2003,007.76
-Philippines*,2004,007.50
-Philippines*,2005,007.47
-Philippines*,2006,007.07
-Philippines*,2007,006.45
-Philippines*,2008,006.45
-Philippines*,2009,006.95
-Philippines*,2010,009.56
-Philippines*,2011,009.18
-Philippines*,2012,008.84
-Philippines*,2013,009.38
-Philippines*,2014,009.84
-Philippines*,2015,
+Philippines,2003,007.76
+Philippines,2004,007.50
+Philippines,2005,007.47
+Philippines,2006,007.07
+Philippines,2007,006.45
+Philippines,2008,006.45
+Philippines,2009,006.95
+Philippines,2010,009.56
+Philippines,2011,009.18
+Philippines,2012,008.84
+Philippines,2013,009.38
+Philippines,2014,009.84
+Philippines,2015,
 Poland,2003,001.72
 Poland,2004,001.65
 Poland,2005,001.44
@@ -2105,19 +2105,19 @@ Reunion,2012,
 Reunion,2013,
 Reunion,2014,
 Reunion,2015,
-Romania***,2003,002.54
-Romania***,2004,002.39
-Romania***,2005,002.13
-Romania***,2006,002.07
-Romania***,2007,001.98
-Romania***,2008,002.27
-Romania***,2009,001.94
-Romania***,2010,001.99
-Romania***,2011,001.67
-Romania***,2012,001.90
-Romania***,2013,001.70
-Romania***,2014,001.52
-Romania***,2015,001.49
+Romania,2003,002.54
+Romania,2004,002.39
+Romania,2005,002.13
+Romania,2006,002.07
+Romania,2007,001.98
+Romania,2008,002.27
+Romania,2009,001.94
+Romania,2010,001.99
+Romania,2011,001.67
+Romania,2012,001.90
+Romania,2013,001.70
+Romania,2014,001.52
+Romania,2015,001.49
 Russian Federation,2003,
 Russian Federation,2004,
 Russian Federation,2005,
@@ -2404,19 +2404,19 @@ Spain,2012,000.78
 Spain,2013,000.65
 Spain,2014,000.70
 Spain,2015,000.66
-Sri Lanka*,2003,006.82
-Sri Lanka*,2004,007.11
-Sri Lanka*,2005,006.25
-Sri Lanka*,2006,010.40
-Sri Lanka*,2007,008.39
-Sri Lanka*,2008,010.04
-Sri Lanka*,2009,005.47
-Sri Lanka*,2010,003.78
-Sri Lanka*,2011,003.60
-Sri Lanka*,2012,003.31
-Sri Lanka*,2013,002.91
-Sri Lanka*,2014,
-Sri Lanka*,2015,
+Sri Lanka,2003,006.82
+Sri Lanka,2004,007.11
+Sri Lanka,2005,006.25
+Sri Lanka,2006,010.40
+Sri Lanka,2007,008.39
+Sri Lanka,2008,010.04
+Sri Lanka,2009,005.47
+Sri Lanka,2010,003.78
+Sri Lanka,2011,003.60
+Sri Lanka,2012,003.31
+Sri Lanka,2013,002.91
+Sri Lanka,2014,
+Sri Lanka,2015,
 State of Palestine,2003,002.73
 State of Palestine,2004,004.13
 State of Palestine,2005,004.05
