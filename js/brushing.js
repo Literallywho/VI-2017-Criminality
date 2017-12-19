@@ -16,7 +16,7 @@ var parcoords = d3.parcoords()("#example")
 var dragflag = 0;
 
 
-function LoadParallelData(year){
+function LoadParallelData(year, callback){
 	// load csv file and create the chart
 	d3.csv('data/peryear-data/'+year+'.csv', function(data) {
 		parcoords
@@ -38,16 +38,21 @@ function LoadParallelData(year){
 			//.on("click", change_color)	
 			.selectAll(".label")
 			.style("font-size", "14px");
+
+
+		if(highlightedCountries[0] === null && highlightedCountries[1] === null && highlightedCountries[2] === null && highlightedCountries[3] === null){
+
+		} else {
+			for(var l = 0; l < 4; l++)
+				if(highlightedCountries[l] !== null)
+					highlightedCountries[l] = parcoords.data().find(function(d){return d.Country == highlightedCountries[l].Country});
+			parcoords.highlight(highlightedCountries);
+		}
+		
+		
+		if(callback) callback();
 	});
 	
-	if(highlightedCountries[0] === null && highlightedCountries[1] === null && highlightedCountries[2] === null && highlightedCountries[3] === null){
-			
-	} else {
-		for(var l = 0; l < 4; l++)
-			if(highlightedCountries[l] !== null)
-				highlightedCountries[l] = parcoords.data().find(function(d){return d.Country == highlightedCountries[l].Country});
-		parcoords.highlight(highlightedCountries);
-	}
 }
 
 

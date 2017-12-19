@@ -204,8 +204,7 @@ $(document).ready(function(){
 					//console.log('Year changed to ' + e.value);
 					selectedYear = e.value;
 					LoadCountryData(selectedYear, crimeName + indicatorName)
-					LoadParallelData(selectedYear);
-					UpdateRadarValues(selectedCountries);
+					LoadParallelData(selectedYear, function() {UpdateRadarValues(selectedCountries)});
 				}
     });
 	
