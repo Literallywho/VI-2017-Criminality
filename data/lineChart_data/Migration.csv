@@ -1,0 +1,374 @@
+Country,Year,Value
+Afghanistan,2007,0.0294
+Afghanistan,2012,0.0185
+Albania,2007,0.0852
+Albania,2012,0.0316
+Algeria,2007,0.0105
+Algeria,2012,0.0038
+Angola,2007,0.0054
+Angola,2012,0.0055
+Antigua and Barbuda,2007,0.0011
+Argentina,2007,0.0022
+Argentina,2012,0.0007
+Armenia,2007,0.0422
+Armenia,2012,0.0030
+Armenia,2012,0.0031
+Aruba,2007,0.0044
+Aruba,2012,0.0120
+Australia,2007,0.0544
+Australia,2012,0.0450
+Austria,2007,0.0185
+Austria,2007,0.0185
+Austria,2012,0.0175
+Austria,2012,0.0175
+Azerbaijan,2007,0.0111
+Azerbaijan,2012,0.0017
+Azerbaijan,2012,0.0017
+Bahrain,2007,0.3046
+Bahrain,2012,0.0247
+Bangladesh,2007,0.0250
+Bangladesh,2012,0.0146
+Barbados,2007,0.0075
+Barbados,2012,0.0079
+Barbados,2012,0.0079
+Belarus,2007,0.0067
+Belarus,2012,0.0127
+Belgium,2007,0.0252
+Belgium,2012,0.0243
+Belgium,2012,0.0243
+Belize,2007,0.0280
+Belize,2012,0.0223
+Benin,2007,0.0063
+Benin,2012,0.0011
+Bhutan,2007,0.0255
+Bhutan,2012,0.0139
+Bosnia and Herzegovina,2007,0.0010
+Bosnia and Herzegovina,2012,0.0007
+Bosnia and Herzegovina,2012,0.0007
+Botswana,2007,0.0108
+Botswana,2012,0.0097
+Brazil,2007,0.0000
+Brazil,2007,0.0000
+Brazil,2012,0.0001
+Brazil,2012,0.0001
+Brunei Darussalam,2007,0.0066
+Brunei Darussalam,2012,0.0053
+Bulgaria,2007,0.0108
+Bulgaria,2012,0.0068
+Bulgaria,2012,0.0068
+Burkina Faso,2007,0.0088
+Burundi,2012,0.0045
+Cambodia,2007,0.0206
+Cambodia,2012,0.0102
+Cameroon,2012,0.0029
+Canada,2007,0.0374
+Canada,2012,0.0338
+Chile,2007,0.0084
+Chile,2012,0.0116
+China,2007,0.0017
+China,2012,0.0013
+Colombia,2007,0.0033
+Colombia,2012,0.0031
+Costa Rica,2007,0.0068
+Costa Rica,2012,0.0042
+Croatia,2007,0.0052
+Croatia,2012,0.0047
+Cuba,2007,0.0173
+Cuba,2012,0.0072
+Cuba,2012,0.0072
+Cyprus,2007,0.0576
+Cyprus,2007,0.0505
+Cyprus,2012,0.0405
+Denmark,2007,0.0161
+Denmark,2007,0.0162
+Denmark,2012,0.0173
+Denmark,2012,0.0174
+Djibouti,2007,0.0258
+Dominican Republic,2007,0.0168
+Dominican Republic,2012,0.0158
+Ecuador,2007,0.0032
+Ecuador,2012,0.0024
+El Salvador,2007,0.0497
+El Salvador,2007,0.0468
+El Salvador,2012,0.0385
+Equatorial Guinea,2007,0.0138
+Estonia,2007,0.0113
+Estonia,2012,0.0090
+Ethiopia,2007,0.0007
+Ethiopia,2007,0.0006
+Ethiopia,2012,0.0007
+Fiji,2007,0.0343
+Fiji,2007,0.0344
+Fiji,2007,0.0345
+Fiji,2012,0.0335
+Finland,2007,0.0135
+Finland,2012,0.0199
+Finland,2012,0.0199
+France,2007,0.0078
+France,2012,0.0052
+French Polynesia,2007,0.0133
+French Polynesia,2007,0.0134
+French Polynesia,2012,0.0019
+French Polynesia,2012,0.0019
+Georgia,2007,0.0660
+Georgia,2012,0.0660
+Germany,2007,0.0004
+Germany,2012,0.0153
+Germany,2012,0.0155
+Ghana,2007,0.0085
+Ghana,2012,0.0019
+Greece,2007,0.0072
+Greece,2007,0.0073
+Greece,2012,0.0123
+Greece,2012,0.0123
+Grenada,2007,0.0407
+Grenada,2012,0.0397
+Guam,2007,0.0615
+Guam,2012,0.0000
+Guatemala,2007,0.0099
+Guatemala,2012,0.0080
+Guinea-Bissau,2007,0.0180
+Guinea-Bissau,2012,0.0067
+Guyana,2007,0.0443
+Guyana,2012,0.0365
+Guyana,2012,0.0364
+Haiti,2007,0.0144
+Haiti,2012,0.0144
+Honduras,2007,0.0133
+Honduras,2012,0.0095
+Hungary,2007,0.0095
+Hungary,2012,0.0030
+Hungary,2012,0.0030
+Iceland,2007,0.0258
+Iceland,2012,0.0012
+Iceland,2012,0.0012
+India,2007,0.0025
+India,2012,0.0021
+Indonesia,2007,0.0050
+Indonesia,2012,0.0029
+Iraq,2007,0.0155
+Iraq,2012,0.0162
+Ireland,2007,0.0455
+Ireland,2007,0.0457
+Ireland,2007,0.0453
+Ireland,2012,0.0305
+Ireland,2012,0.0305
+Ireland,2012,0.0305
+Israel,2007,0.0381
+Israel,2012,0.0025
+Italy,2007,0.0173
+Italy,2007,0.0172
+Italy,2012,0.0089
+Italy,2012,0.0089
+Jamaica,2007,0.0355
+Jamaica,2012,0.0358
+Japan,2007,0.0035
+Japan,2007,0.0035
+Japan,2012,0.0027
+Jordan,2007,0.0737
+Jordan,2012,0.0309
+Kazakhstan,2007,0.0023
+Kazakhstan,2012,0.0096
+Kazakhstan,2012,0.0095
+Kenya,2007,0.0051
+Kenya,2012,0.0012
+Kuwait,2007,0.2092
+Kuwait,2012,0.1594
+Latvia,2007,0.0392
+Latvia,2007,0.0390
+Latvia,2012,0.0359
+Latvia,2012,0.0361
+Lebanon,2007,0.0488
+Lesotho,2007,0.0130
+Liberia,2007,0.0516
+Liberia,2012,0.0053
+Libya,2007,0.0152
+Libya,2012,0.0851
+Lithuania,2007,0.0436
+Lithuania,2007,0.0438
+Lithuania,2012,0.0567
+Lithuania,2012,0.0564
+Luxembourg,2007,0.0881
+Luxembourg,2012,0.0917
+Luxembourg,2012,0.0928
+Madagascar,2007,0.0003
+Malawi,2007,0.0028
+Malawi,2012,0.0020
+Malaysia,2007,0.0241
+Malaysia,2012,0.0152
+Maldives,2007,0.0002
+Maldives,2012,0.0002
+Mali,2007,0.0081
+Mali,2012,0.0185
+Malta,2007,0.0332
+Malta,2007,0.0333
+Malta,2012,0.0150
+Malta,2012,0.0149
+Mauritania,2007,0.0065
+Mauritius,2007,0.0096
+Mauritius,2012,0.0000
+Mexico,2007,0.0037
+Mexico,2012,0.0045
+Mongolia,2007,0.0058
+Mongolia,2012,0.0053
+Montenegro,2007,0.0050
+Montenegro,2012,0.0039
+Montenegro,2012,0.0039
+Morocco,2007,0.0187
+Morocco,2012,0.0095
+Mozambique,2007,0.0025
+Mozambique,2007,0.0024
+Mozambique,2012,0.0011
+Myanmar,2007,0.0255
+Myanmar,2012,0.0094
+Namibia,2007,0.0247
+Namibia,2012,0.0006
+Nepal,2007,0.0387
+Nepal,2012,0.0139
+Netherlands,2007,0.0034
+Netherlands,2007,0.0034
+Netherlands,2012,0.0066
+Netherlands,2012,0.0066
+New Caledonia,2007,0.0176
+New Caledonia,2012,0.0221
+New Caledonia,2012,0.0219
+New Zealand,2007,0.0148
+New Zealand,2012,0.0016
+Nicaragua,2007,0.0277
+Nicaragua,2012,0.0222
+Niger,2007,0.0021
+Niger,2012,0.0017
+Niger,2012,0.0017
+Niger,2012,0.0017
+Norway,2007,0.0369
+Norway,2012,0.0473
+Norway,2012,0.0470
+Oman,2007,0.0676
+Oman,2012,0.3343
+Pakistan,2007,0.0080
+Pakistan,2007,0.0087
+Panama,2007,0.0064
+Panama,2012,0.0074
+Paraguay,2007,0.0192
+Paraguay,2012,0.0130
+Peru,2007,0.0179
+Peru,2007,0.0179
+Peru,2007,0.0172
+Peru,2012,0.0080
+Philippines,2007,0.0207
+Philippines,2007,0.0206
+Philippines,2012,0.0073
+Poland,2007,0.0001
+Poland,2007,0.0001
+Poland,2012,0.0019
+Poland,2012,0.0019
+Portugal,2007,0.0120
+Portugal,2007,0.0121
+Portugal,2012,0.0133
+Portugal,2012,0.0133
+Puerto Rico,2007,0.0365
+Puerto Rico,2012,0.0285
+Qatar,2007,0.7017
+Qatar,2012,0.1983
+Romania,2007,0.0419
+Romania,2007,0.0419
+Romania,2012,0.0218
+Russian Federation,2007,0.0152
+Russian Federation,2007,0.0151
+Russian Federation,2012,0.0078
+Russian Federation,2012,0.0078
+Rwanda,2007,0.0078
+Rwanda,2012,0.0072
+Rwanda,2012,0.0071
+Rwanda,2012,0.0072
+Samoa,2007,0.0846
+Samoa,2012,0.0671
+Sao Tome and Principe,2007,0.0362
+Sao Tome and Principe,2012,0.0313
+Sao Tome and Principe,2012,0.0299
+Saudi Arabia,2007,0.0327
+Saudi Arabia,2012,0.0291
+Senegal,2007,0.0144
+Senegal,2012,0.0076
+Serbia,2007,0.0052
+Serbia,2007,0.0052
+Serbia,2012,0.0139
+Serbia,2012,0.0139
+Seychelles,2007,0.0131
+Seychelles,2012,0.0176
+Sierra Leone,2007,0.0112
+Sierra Leone,2012,0.0035
+Singapore,2007,0.0979
+Singapore,2007,0.1254
+Singapore,2012,0.1042
+Singapore,2012,0.0749
+Slovenia,2007,0.0247
+Slovenia,2007,0.0246
+Slovenia,2012,0.0021
+Slovenia,2012,0.0021
+Solomon Islands,2007,0.0240
+Solomon Islands,2012,0.0214
+South Africa,2007,0.0287
+South Africa,2012,0.0115
+Spain,2007,0.0497
+Spain,2007,0.0502
+Spain,2012,0.0127
+Spain,2012,0.0127
+Sri Lanka,2007,0.0260
+Sri Lanka,2012,0.0238
+Sri Lanka,2012,0.0237
+Sudan,2012,0.0228
+Suriname,2007,0.0111
+Suriname,2012,0.0092
+Swaziland,2007,0.0071
+Swaziland,2007,0.0059
+Swaziland,2007,0.0059
+Swaziland,2012,0.0056
+Sweden,2007,0.0288
+Sweden,2007,0.0287
+Sweden,2012,0.0287
+Sweden,2012,0.0286
+Switzerland,2007,0.0459
+Switzerland,2007,0.0457
+Switzerland,2012,0.0481
+Switzerland,2012,0.0478
+Syrian Arab Republic,2007,0.0193
+Tajikistan,2007,0.0092
+Tajikistan,2012,0.0149
+Thailand,2007,0.0136
+Thailand,2007,0.0130
+Thailand,2012,0.0015
+Timor-Leste,2007,0.1001
+Togo,2007,0.0018
+Togo,2012,0.0015
+Tonga,2007,0.0794
+Trinidad and Tobago,2007,0.0087
+Trinidad and Tobago,2012,0.0037
+Tunisia,2007,0.0032
+Tunisia,2012,0.0031
+Turkey,2007,0.0007
+Turkey,2007,0.0007
+Turkey,2007,0.0007
+Turkey,2012,0.0266
+Turkey,2012,0.0267
+Turkey,2012,0.0264
+Uganda,2007,0.0047
+Uganda,2012,0.0044
+Ukraine,2007,0.0051
+Ukraine,2007,0.0050
+Ukraine,2007,0.0051
+Ukraine,2007,0.0051
+Ukraine,2012,0.0043
+Ukraine,2012,0.0043
+Ukraine,2012,0.0043
+Ukraine,2012,0.0043
+United Arab Emirates,2007,0.5617
+Uruguay,2007,0.0149
+Uruguay,2012,0.0088
+Uzbekistan,2007,0.0108
+Uzbekistan,2012,0.0065
+Vanuatu,2012,0.0025
+Zambia,2007,0.0102
+Zambia,2012,0.0024
+Zimbabwe,2007,0.0256
+Zimbabwe,2012,0.0168
