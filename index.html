@@ -57,7 +57,7 @@
 	</style>
 </head>
 <body>
-	<div id="header" class="col-xs-12">
+	<div id="header" class="col-xs-12">		
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div class="row">
@@ -136,7 +136,7 @@
 		<!-- ################## RADIO ################# -->
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 				<h4>Indicators</h4>
-				<button class="btn outline btn-indicator-selector">Education Index</button>
+				<button class="btn outline btn-indicator-selector">Education</button>
 				<button class="btn outline btn-indicator-selector">GDP</button>
 				<button class="btn outline btn-indicator-selector">Migration</button>
 				<button class="btn outline btn-indicator-selector">Unemployment</button>
@@ -188,8 +188,9 @@
 
 var selectedYear = 2003;
 var slideStarted = false;
-var selectedCountries = ['-', '-', '-', '-']
-var currentIndicator = "";
+var selectedCountries = ['-', '-', '-', '-'];
+var crimeName = "";
+var indicatorName = "";
 
 var countries = `
 			<li><a href="#">-</a></li>
@@ -207,7 +208,7 @@ $(document).ready(function(){
 		selectedCountries[countryID-1] = countryName;
 		ChangeHighlighted(countryName, countryID);
 		ChangeRadarValues(countryName, countryID);
-		LoadLineChart('Unemployment_Age15+', selectedCountries)
+		LoadLineChart(crimeName + indicatorName, selectedCountries)
 	}
 
 	var ul = $('.country-list');
@@ -241,11 +242,18 @@ $(document).ready(function(){
 	function selectButtonDeselectOthers(selfButton, classToDeselect, classToAdd){
 		removeOnly = selfButton.hasClass(classToAdd);
 		$(classToDeselect).removeClass(classToAdd);
+		if(classToDeselect == '.btn-crime-selector')
+				crimeName = "";
+		else
+			indicatorName = "";
 		if(!removeOnly){
 			selfButton.addClass(classToAdd);
-			currentIndicator = 'Unemployment_Age15+';
-			LoadLineChart('Unemployment_Age15+', selectedCountries)
+			if(classToDeselect == '.btn-crime-selector')
+				crimeName = selfButton.html();
+			else
+				indicatorName = selfButton.html();
 		}
+		LoadLineChart(crimeName + indicatorName, selectedCountries)
 	}
 	
 	$('.btn-crime-selector').click(function(){
@@ -255,6 +263,8 @@ $(document).ready(function(){
 	$('.btn-indicator-selector').click(function(){
 		selectButtonDeselectOthers($(this), '.btn-indicator-selector', 'selected');
 	});
+	
+	LoadLineChart(crimeName + indicatorName, selectedCountries)
 });
 
 </script>

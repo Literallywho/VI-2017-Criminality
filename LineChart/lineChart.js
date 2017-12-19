@@ -19,7 +19,7 @@ var y = d3.scale.linear().range([height, 0]);
 var noFormat = d3.format("04d");
 // Define the axes
 var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(10).tickFormat(function(a) {return noFormat(a)});
+    .orient("bottom").ticks(7).tickFormat(function(a) {return noFormat(a)});
 
 var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
@@ -114,13 +114,18 @@ function LoadLineChart(chartName, selectedCountries){
 		var abc = ['A', 'B', 'C', 'D'];
 		for (var j = 0; j < selectedCountries.length; j++)
 		{
-			var newdata = data.reduce(function(a, e, i) {
-				if (e.Country == selectedCountries[j])
-						a.push(e);
-				return a;
-			}, []);
-			if(newdata.length == 0){
-				newdata = [{Country: abc[j], Year: "2003", Value: "0.0"}]
+			var newdata;
+			if(typeof data == 'undefined'){
+				newdata = [{Country: abc[j], Year: "2003", Value: "0.0"}, {Country: abc[j], Year: "2015", Value: "0.0"}];
+			} else {
+				newdata = data.reduce(function(a, e, i) {
+					if (e.Country == selectedCountries[j])
+							a.push(e);
+					return a;
+				}, []);
+				if(newdata.length == 0){
+					newdata = [{Country: abc[j], Year: "2003", Value: "0.0"}, {Country: abc[j], Year: "2015", Value: "0.0"}]
+				}
 			}
 			lcData = lcData.concat(newdata);
 		}
