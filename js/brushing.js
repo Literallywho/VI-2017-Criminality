@@ -15,28 +15,41 @@ var parcoords = d3.parcoords()("#example")
 	
 var dragflag = 0;
 
-// load csv file and create the chart
-d3.csv('data/cars.csv', function(data) {
-  parcoords
-    .data(data)
-    .hideAxis(["name"])
-    .composite("darker")
-    .render()
-    .shadows()
-    .reorderable()
-    .brushMode("1D-axes");  // enable brushing
-	
-  change_color("GDP");
 
-  // click label to activate coloring
-  parcoords.svg.selectAll(".dimension")
-	.on('mousedown', function(){ dragflag = 0; })
-	.on('mousemove', function(){ dragflag = 1; })
-	.on('mouseup', function(e) { if(dragflag === 0) change_color(e); })
-    //.on("click", change_color)	
-    .selectAll(".label")
-    .style("font-size", "14px");
-});
+function LoadParallelData(year){
+	// load csv file and create the chart
+	d3.csv('data/peryear-data/'+year+'.csv', function(data) {
+		parcoords
+			.data(data)
+			.hideAxis(["Country", "Years"])
+			.composite("darker")
+			.render()
+			.shadows()
+			.reorderable()
+			.brushMode("1D-axes");  // enable brushing
+	
+		change_color("GDP");
+
+		// click label to activate coloring
+		parcoords.svg.selectAll(".dimension")
+		.on('mousedown', function(){ dragflag = 0; })
+		.on('mousemove', function(){ dragflag = 1; })
+		.on('mouseup', function(e) { if(dragflag === 0) change_color(e); })
+			//.on("click", change_color)	
+			.selectAll(".label")
+			.style("font-size", "14px");
+	});
+	
+	if(highlightedCountries[0] === null && highlightedCountries[1] === null && highlightedCountries[2] === null && highlightedCountries[3] === null){
+			
+	} else {
+		for(var l = 0; l < 4; l++)
+			if(highlightedCountries[l] !== null)
+				highlightedCountries[l] = parcoords.data().find(function(d){return d.Country == highlightedCountries[l].Country});
+		parcoords.highlight(highlightedCountries);
+	}
+}
+
 
 // update color
 function change_color(dimension) {
@@ -118,7 +131,7 @@ function ChangeHighlighted(country, position){
 			parcoords.highlight(highlightedCountries);
 		}
 	} else {
-		highlightedCountries[position-1] = parcoords.data().find(function(d){return d.name == country});
+		highlightedCountries[position-1] = parcoords.data().find(function(d){return d.Country == country});
 		parcoords.highlight(highlightedCountries);
 	}
 }

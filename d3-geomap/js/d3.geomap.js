@@ -409,7 +409,9 @@ var Geomap = (function () {
                 self.svg.append('g').attr('class', 'units zoom').selectAll('path').data(topojson.feature(geo, geo.objects[self.properties.units]).features).enter().append('path').attr('class', function (d) {
                     return 'unit ' + self.properties.unitPrefix + d.id;
                 }).attr('d', self.path).on('click', self.clicked.bind(self)).append('title').text(self.properties.unitTitle);
+								
                 self.update();
+
             });
         }
     }, {

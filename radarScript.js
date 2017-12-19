@@ -63,7 +63,27 @@ var mycfg = {
 //Will expect that data is in %'s
 RadarChart.draw("#chart", d, mycfg);
 
-
+function UpdateRadarValues(selectedCountries){
+	for(var j = 0; j<4; j++){
+		if(selectedCountries[j] == ''){
+			d[j] = [
+				{axis:"Theft",value:0.0},
+				{axis:"Burglary",value:0.0},
+				{axis:"Rape",value:0.0},
+				{axis:"Homicide",value:0.0},
+				{axis:"GDP",value:0.0},
+				{axis:"Unemployment",value:0.0},
+				{axis:"Education",value:0.0},
+				{axis:"Migration",value:0.0},
+		  ];
+			RadarChart.draw('#chart', d, mycfg);
+		} else {
+			info = parcoords.data().find(function(d){return d.Country == selectedCountries[j]})
+			d[j] = ConvertToRadar([info])[0];
+		}
+	}
+	RadarChart.update('#chart', d, mycfg);
+}
 
 function ChangeRadarValues(country, position){
 		if(country == ''){
@@ -79,7 +99,7 @@ function ChangeRadarValues(country, position){
 		  ];
 			RadarChart.draw('#chart', d, mycfg);
 	} else {
-		info = parcoords.data().find(function(d){return d.name == country})
+		info = parcoords.data().find(function(d){return d.Country == country})
 		d[position-1] = ConvertToRadar([info])[0];
 		RadarChart.update('#chart', d, mycfg);
 	}

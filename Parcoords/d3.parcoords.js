@@ -217,11 +217,10 @@ pc.autoscale = function() {
     },
     "number": function(k) {
       var extent = d3.extent(__.data, function(d) { return +d[k]; });
-
       // special case if single value
       if (extent[0] === extent[1]) {
         return d3.scale.ordinal()
-          .domain([extent[0]])
+          .domain([-0.1, 1])
           .rangePoints(getRange());
       }
 
