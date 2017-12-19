@@ -185,6 +185,8 @@ $(document).ready(function(){
 		LoadLineChart(crimeName + indicatorName, selectedCountries)
 	}
 	
+	$('.bfh-countries>a>span.bfh-selectbox-option').text('Choose a country');
+	
 	$('.bfh-countries').on('change.bfhselectbox', function(e) {
 		updateCountry($('#' + this.id + '>a>span.bfh-selectbox-option').text(), this.id[4])
 	});
