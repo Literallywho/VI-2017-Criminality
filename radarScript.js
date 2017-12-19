@@ -66,7 +66,7 @@ RadarChart.draw("#chart", d, mycfg);
 
 
 function ChangeRadarValues(country, position){
-		if(country == '-'){
+		if(country == ''){
 			d[position-1] = [
 				{axis:"Theft",value:0.0},
 				{axis:"Burglary",value:0.0},
@@ -88,6 +88,16 @@ function ChangeRadarValues(country, position){
 function ConvertToRadar(infoArray){
 	var convertedArray = [];
 	var i = 0;
+	if(typeof infoArray[0] == 'undefined') return [[
+				{axis:"Theft",value:0.0},
+				{axis:"Burglary",value:0.0},
+				{axis:"Rape",value:0.0},
+				{axis:"Homicide",value:0.0},
+				{axis:"GDP",value:0.0},
+				{axis:"Unemployment",value:0.0},
+				{axis:"Education",value:0.0},
+				{axis:"Migration",value:0.0},
+		  ]]
 	for(var i = 0;i<infoArray.length;i++){
 		var converted = [];
 		converted.push({axis:"Theft", value: infoArray[i]['Theft']});

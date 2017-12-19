@@ -27,6 +27,14 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap-slider.min.css">
 	
+	
+  <!-- Bootstrap Form Helpers -->
+  <script src="bootstrap/bootstrap-formhelpers.js"></script>
+	<script src="bootstrap/bootstrap-formhelpers-countries.js"></script>
+	<script src="bootstrap/bootstrap-formhelpers-countries.en_US.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap-formhelpers.css">
+	
 	<style>
 
 		#chart {
@@ -63,12 +71,7 @@
 					<div class="box btn-country1"> </div>
 				  </div>
 				  <div class="col-xs-10">
-					<div class="dropdown">
-						<button id="pais1" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-						<span class="caret"></span></button>
-						<ul class="dropdown-menu country-list">
-						</ul>
-					</div>
+						<div id="pais1" class="bfh-selectbox bfh-countries pais1" data-flags="true"></div>
 				  </div>
 				</div>					
 			</div>
@@ -78,13 +81,8 @@
 					<div class="box btn-country2"> </div>
 				  </div>
 				  <div class="col-xs-10">
-					<div class="dropdown">
-						<button id="pais2" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-						<span class="caret"></span></button>
-						<ul class="dropdown-menu country-list">
-						</ul>
+						<div id="pais2" class="bfh-selectbox bfh-countries pais2" data-flags="true"></div>
 					</div>
-				  </div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -93,13 +91,8 @@
 					<div class="box btn-country3"> </div>
 				  </div>
 				  <div class="col-xs-10">
-					<div class="dropdown">
-						<button id="pais3" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-						<span class="caret"></span></button>
-						<ul class="dropdown-menu country-list">
-						</ul>
+						<div id="pais3" class="bfh-selectbox bfh-countries pais3" data-flags="true"></div>
 					</div>
-				  </div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -108,12 +101,7 @@
 					<div class="box btn-country4"> </div>
 				  </div>
 				  <div class="col-xs-10">
-					<div class="dropdown">
-						<button id="pais4" class="width100 btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="btn-text">Choose a country</span>
-						<span class="caret"></span></button>
-						<ul class="dropdown-menu country-list">
-						</ul>
-					</div>
+						<div id="pais4" class="bfh-selectbox bfh-countries pais4" data-flags="true"></div>
 				  </div>
 				</div>
 			</div>
@@ -186,14 +174,6 @@ var selectedCountries = ['-', '-', '-', '-'];
 var crimeName = "";
 var indicatorName = "";
 
-var countries = `
-			<li><a href="#">-</a></li>
-			<li><a href="#">Portugal</a></li>
-			<li><a href="#">USA</a></li>
-			<li><a href="#">France</a></li>
-			<li><a href="#">Spain</a></li>
-			<li><a href="#">England</a></li>
-			`
 $(document).ready(function(){
 	
 	initializeCodes();
@@ -204,18 +184,9 @@ $(document).ready(function(){
 		ChangeRadarValues(countryName, countryID);
 		LoadLineChart(crimeName + indicatorName, selectedCountries)
 	}
-
-	var ul = $('.country-list');
-	ul.append(countries);
 	
-	$('.dropdown-menu li a').click(function (e, ob) {
-		var $this = $(this);
-			var newHeading = $(this).text();
-			var $heading = $('.dropdown > a');
-	
-		$this.parents('ul').siblings('button').html(newHeading + ' ').append('<span class="caret"></span></button>');
-		
-		updateCountry(newHeading, $this.parents('ul').siblings('button')[0].id[4]);
+	$('.bfh-countries').on('change.bfhselectbox', function(e) {
+		updateCountry($('#' + this.id + '>a>span.bfh-selectbox-option').text(), this.id[4])
 	});
 	
 	$("#ex13").slider({

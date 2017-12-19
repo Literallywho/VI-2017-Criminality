@@ -109,7 +109,7 @@ parcoords.highlightedColors(['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']);
 var highlightedCountries = [null, null, null, null];
 
 function ChangeHighlighted(country, position){
-	if(country == '-'){
+	if(country == ''){
 		highlightedCountries[position-1] = null;
 		parcoords.unhighlight([]);
 		if(highlightedCountries[0] === null && highlightedCountries[1] === null && highlightedCountries[2] === null && highlightedCountries[3] === null){
