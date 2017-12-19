@@ -38,6 +38,10 @@
 	padding-left: 35px;
 }
 
+.slider-tick-label{
+	color: #ffffee;
+}
+
 .btn-country1{
 	background-color: var(--country1);
 	border-color: var(--country1-secondary);
